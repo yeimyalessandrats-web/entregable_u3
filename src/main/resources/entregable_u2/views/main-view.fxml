@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="entregable_u2.controller.MainController">
+    <!--cabecera -->
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="70.0" styleClass="header" BorderPane.alignment="CENTER">
+            <children>
+            <Label text="TRANSPORTE" textFill="#0B2545">
+             <font><Font name="Georgia Bold" size="24.0" /></font>
+                <HBox.margin><Insets left="20.0" /></HBox.margin>
+            </Label>
+            <Label text="Gestion de viajes y pasajes" textFill="#4A5A6A">
+                <HBox.margin><Insets left="10.0" /></HBox.margin>
+            </Label>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label text="Bienvenido, " fx:id="lblUsuario" textFill="#0B2545">
+                <font><Font name="Georgia Italic" size="14.0" /></font>
+                <HBox.margin><Insets right="20.0" /></HBox.margin>
+            </Label>
+            </children>
+        </HBox>
+    </top>
+    <!--MENU IZQUIERDO -->
+   <left>
+    <VBox prefWidth="200.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+        <children>
+            <Button maxWidth="Infinity" onAction="#showHome" mnemonicParsing="false" styleClass="nav-button" text="Inicio" />
+            <Button maxWidth="Infinity" onAction="#showConductor" mnemonicParsing="false" styleClass="nav-button" text="Conductores" />
+            <Button maxWidth="Infinity" onAction="#showPasajero" mnemonicParsing="false" styleClass="nav-button" text="Pasajeros" />
+            <Button maxWidth="Infinity" onAction="#showVehiculo" mnemonicParsing="false" styleClass="nav-button" text="Vehiculos" />
+            <Button maxWidth="Infinity" onAction="#showTarifa" mnemonicParsing="false" styleClass="nav-button" text="Tarifario" />
+            <Button maxWidth="Infinity" onAction="#showViaje" mnemonicParsing="false" styleClass="nav-button" text="Viajes" />
+            <Button maxWidth="Infinity" onAction="#showPasaje" mnemonicParsing="false" styleClass="nav-button" text="Pasajes" />
+        <Region VBox.vgrow="ALWAYS"/>
+            <Button maxWidth="Infinity"
+                    mnemonicParsing="false" style="-fx-text-fill: #F28B82"
+                    styleClass="nav-button" text="Cerrar Sesion" onAction="#handleLogout" />
+
+        </children>
+
+    </VBox>
+   </left>
+    <!--area de contenido (body)-->
+    <center>
+        <VBox BorderPane.alignment="CENTER">
+            <StackPane fx:id="contentArea" styleClass="content-area" VBox.vgrow="ALWAYS">
+                <children>
+                    <Label text="Seleccione una opcion del menu"
+                           textFill="#8493A3" />
+                </children>
+            </StackPane>
+            <HBox alignment="CENTER" prefHeight="20.0">
+                <children>
+                    <Label text="©copyright 2026"
+                           textFill="#8493A3" />
+                </children>
+            </HBox>
+
+        </VBox>
+
+
+    </center>
+
+</BorderPane>
