@@ -1,4 +1,4 @@
-package entregable_u2.controller;
+package entregable_u3.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,11 +8,11 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import entregable_u2.implementacion.UsuarioDaoImpl;
-import entregable_u2.interfaces.IUsuarioDao;
-import entregable_u2.modelo.UserSession;
-import entregable_u2.modelo.Usuario;
-import entregable_u2.utils.UtilAlerts;
+import entregable_u3.implementacion.UsuarioDaoImpl;
+import entregable_u3.interfaces.IUsuarioDao;
+import entregable_u3.modelo.UserSession;
+import entregable_u3.modelo.Usuario;
+import entregable_u3.utils.UtilAlerts;
 
 import java.io.IOException;
 
@@ -52,7 +52,7 @@ public class LoginController {
     private void navigateToHome(){
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource
-                    ("/entregable_u2/views/main-view.fxml"));
+                    ("/entregable_u3/views/main-view.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) txtUser.getScene().getWindow();
             Scene scene = new Scene(root);

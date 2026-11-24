@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>transporte</groupId>
-    <artifactId>entregable_u2</artifactId>
+    <artifactId>entregable_u3</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>entregable_u2</name>
+    <name>entregable_u3</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -98,7 +98,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>entregable_u2/entregable_u2.HelloApplication</mainClass>
+                            <mainClass>entregable_u3/entregable_u3.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

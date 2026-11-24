@@ -1,4 +1,4 @@
-package entregable_u2.modelo;
+package entregable_u3.modelo;
 
 public class UserSession {
     private static UserSession instance;

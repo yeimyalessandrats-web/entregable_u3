@@ -1,6 +1,6 @@
-package entregable_u2.test;
+package entregable_u3.test;
 
-import entregable_u2.utils.ConexionDB;
+import entregable_u3.utils.ConexionDB;
 
 import java.sql.Connection;
 

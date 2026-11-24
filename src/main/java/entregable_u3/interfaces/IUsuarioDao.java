@@ -1,6 +1,6 @@
-package entregable_u2.interfaces;
+package entregable_u3.interfaces;
 
-import entregable_u2.modelo.Usuario;
+import entregable_u3.modelo.Usuario;
 
 public interface IUsuarioDao {
 

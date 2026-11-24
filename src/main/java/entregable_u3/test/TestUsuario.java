@@ -1,8 +1,8 @@
-package entregable_u2.test;
+package entregable_u3.test;
 
-import entregable_u2.implementacion.UsuarioDaoImpl;
-import entregable_u2.interfaces.IUsuarioDao;
-import entregable_u2.modelo.Usuario;
+import entregable_u3.implementacion.UsuarioDaoImpl;
+import entregable_u3.interfaces.IUsuarioDao;
+import entregable_u3.modelo.Usuario;
 
 public class TestUsuario {
     private static IUsuarioDao dao = new UsuarioDaoImpl();

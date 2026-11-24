@@ -1,4 +1,4 @@
-package entregable_u2;
+package entregable_u3;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,12 +12,12 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class
-                .getResource("/entregable_u2/views/login-view.fxml"));
+                .getResource("/entregable_u3/views/login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         // Asignación de ícono a la ventana principal
         stage.getIcons().add(new
         Image(getClass().getResourceAsStream
-                ("/entregable_u2/img/logo.jpg")));
+                ("/entregable_u3/img/logo.jpg")));
         stage.setTitle("Login - Sistema de Transporte!");
         stage.setScene(scene);
         stage.show();

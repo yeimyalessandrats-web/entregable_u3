@@ -1,11 +1,11 @@
-package entregable_u2.controller;
+package entregable_u3.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
-import entregable_u2.modelo.UserSession;
+import entregable_u3.modelo.UserSession;
 
 
 import java.io.IOException;
@@ -62,7 +62,7 @@ public class MainController {
     private void loadView(String fxml){
         try {
             FXMLLoader loader = new FXMLLoader(getClass()
-                    .getResource("/entregable_u2/views/"+fxml));
+                    .getResource("/entregable_u3/views/" +fxml));
             Parent view = loader.load();
             contentArea.getChildren().setAll(view);
         } catch (IOException e) {

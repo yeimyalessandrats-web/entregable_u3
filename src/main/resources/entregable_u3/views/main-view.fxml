@@ -6,7 +6,7 @@
 <?import javafx.scene.text.*?>
 
 <BorderPane prefHeight="600.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="entregable_u2.controller.MainController">
+            fx:controller="entregable_u3.controller.MainController">
     <!--cabecera -->
     <top>
         <HBox alignment="CENTER_LEFT" prefHeight="70.0" styleClass="header" BorderPane.alignment="CENTER">

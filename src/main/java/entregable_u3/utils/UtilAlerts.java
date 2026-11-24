@@ -1,4 +1,4 @@
-package entregable_u2.utils;
+package entregable_u3.utils;
 import javafx.scene.control.Alert;
 public class UtilAlerts {
     public static Alert mostrarAlerts(String titulo, String mensaje, String tipo) {
