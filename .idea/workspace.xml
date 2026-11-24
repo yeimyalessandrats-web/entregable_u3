@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da7966ec-d3a2-4183-bce9-91a552b81cf9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u2/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u2/MainLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/MainLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u2/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u2/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u2/implementacion/UsuarioDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/implementacion/UsuarioDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u2/interfaces/IUsuarioDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/interfaces/IUsuarioDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u2/modelo/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u2/modelo/UserSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/UserSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u2/modelo/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u2/test/TestConexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/test/TestConexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u2/test/TestUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/test/TestUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u2/utils/ConexionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/utils/ConexionDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u2/utils/UtilAlerts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/utils/UtilAlerts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/entregable_u2/img/logo.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/img/logo.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/entregable_u2/img/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/img/logo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/entregable_u2/img/portada.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/img/portada.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/entregable_u2/views/home-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/home-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/entregable_u2/views/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/login-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/entregable_u2/views/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/main-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/entregable_u2/views/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="da7966ec-d3a2-4183-bce9-91a552b81cf9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +48,7 @@
       <recent name="C:\IntelIdea\entregable_u2\src\main\resources\entregable_u2\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\IntelIdea\entregable_u3\src\main\resources\entregable_u3\views" />
       <recent name="C:\IntelIdea\entregable_u2\src\main\resources\entregable_u2\logo" />
     </key>
   </component>
