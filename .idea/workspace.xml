@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da7966ec-d3a2-4183-bce9-91a552b81cf9" name="Changes" comment="" />
+    <list default="true" id="da7966ec-d3a2-4183-bce9-91a552b81cf9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,19 +39,27 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "git-widget-placeholder": "main",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "katty",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/IntelIdea/entregable_u3"
+    "last_opened_file_path": "C:/POO 2026/backup/entregable_u3/src/main/resources/entregable_u3/views"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\POO 2026\backup\entregable_u3\src\main\resources\entregable_u3\views" />
       <recent name="C:\IntelIdea\entregable_u2\src\main\resources\entregable_u2\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\IntelIdea\entregable_u3\src\main\resources\entregable_u3\views" />
       <recent name="C:\IntelIdea\entregable_u2\src\main\resources\entregable_u2\logo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="entregable_u3.controller" />
+      <recent name="entregable_u3.interfaces" />
+      <recent name="entregable_u3.modelo" />
+      <recent name="entregable_u3.implementacion" />
     </key>
   </component>
   <component name="RunManager">
