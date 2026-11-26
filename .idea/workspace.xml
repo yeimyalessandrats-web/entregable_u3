@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da7966ec-d3a2-4183-bce9-91a552b81cf9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/AcompananteFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/test/TestPasaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/test/TestTarifa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/test/TestViaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/ConductorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/ConductorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/TarifaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/TarifaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/VehiculoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/VehiculoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/ViajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/ViajeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/implementacion/PasajeDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/implementacion/PasajeDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/implementacion/ViajeDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/implementacion/ViajeDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/interfaces/IPasajeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/interfaces/IPasajeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/interfaces/IViajeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/interfaces/IViajeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Pasaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Pasaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Pasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Pasajero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Viaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Viaje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/utils/ConexionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/utils/ConexionDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/conductor-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/pasaje-form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/pasaje-form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/pasaje-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/pasaje-view.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="da7966ec-d3a2-4183-bce9-91a552b81cf9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,23 +29,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Maven.entregable_u2 [clean].executor": "Run",
-    "Maven.entregable_u2 [package].executor": "Run",
-    "Maven.entregable_u3 [clean].executor": "Run",
-    "Maven.entregable_u3 [package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/IntelIdea/entregable_u3"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.entregable_u2 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.entregable_u2 [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.entregable_u3 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.entregable_u3 [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/IntelIdea/entregable_u3&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\POO 2026\backup\entregable_u3\src\main\resources\entregable_u3\views" />
