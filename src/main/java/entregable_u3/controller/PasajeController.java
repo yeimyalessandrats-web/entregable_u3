@@ -17,6 +17,7 @@ import entregable_u3.modelo.Pasaje;
 import entregable_u3.utils.UtilAlerts;
 
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Optional;
 
 public class PasajeController {
@@ -40,6 +41,8 @@ public class PasajeController {
     private TableColumn<Pasaje, String> ColPasajero;
     @FXML
     private TableColumn<Pasaje, String> ColDni;
+    @FXML
+    private TableColumn<Pasaje, String> ColComprador;
     @FXML
     private TableColumn<Pasaje, String> ColViaje;
     @FXML
@@ -77,6 +80,10 @@ public class PasajeController {
                         + cd.getValue().getPasajero().getApellidos()));
         ColDni.setCellValueFactory(
                 cd -> cd.getValue().getPasajero().dniProperty());
+        // quien compro y pago el pasaje (puede ser distinto al pasajero que viaja)
+        ColComprador.setCellValueFactory(
+                cd -> new SimpleStringProperty(cd.getValue().getComprador().getNombres() + " "
+                        + cd.getValue().getComprador().getApellidos()));
         ColViaje.setCellValueFactory(
                 cd -> new SimpleStringProperty(cd.getValue().getViaje().getTarifa().getOrigen() + " -> "
                         + cd.getValue().getViaje().getTarifa().getDestino()));
@@ -130,59 +137,43 @@ public class PasajeController {
 
     @FXML
     private void handleNew() {
-        showForm(null);
+        showForm();
     }
 
-    @FXML
-    private void handleEdit() {
-        Pasaje selectPasaje = tablePasaje.getSelectionModel().getSelectedItem();
-        if (selectPasaje != null) {
-            Pasaje pasajeFull = pasajeDao.searchById(selectPasaje.getIdpasaje());
-            showForm(pasajeFull);
-        } else {
-            Alert alert = utilAlert.mostrarAlerts("Seleccion requerida",
-                    "Seleccione un pasaje de la tabla", "WARNING");
-            alert.show();
-        }
-    }
-
-    private void showForm(Pasaje p) {
+    // formulario de compra: el pasajero elige los viajes y la cantidad de pasajes
+    private void showForm() {
         try {
             FXMLLoader loader = new FXMLLoader(HelloApplication.class
-                    .getResource("/entregable_u2/views/pasaje-form.fxml"));
+                    .getResource("/entregable_u3/views/pasaje-form.fxml"));
             Parent root = loader.load();
             PasajeFormController controller = loader.getController();
-            controller.setPasaje(p); //pasamos el pasaje null si es nuevo
             Stage stage = new Stage();
-            stage.setTitle(p == null ? "Nuevo Pasaje" : "Editar Pasaje");
+            stage.setTitle("Nuevo Pasaje");
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.setScene(new Scene(root));
             stage.showAndWait();
             if (controller.isSaved()) {
-                Pasaje pasajeProcesado = controller.getPasaje();
-                if (p == null) {
-                    boolean result = pasajeDao.insert(pasajeProcesado);
-                    if (result) {
-                        // se muestra el codigo que se genero para el pasaje
-                        Alert alert = utilAlert.mostrarAlerts("Pasaje registrado",
-                                "Registro satisfactorio!!!\nCodigo del pasaje: "
-                                        + pasajeProcesado.getCodigo(), "CONFIRMATION");
-                        alert.show();
-                    } else {
-                        Alert alert = utilAlert.mostrarAlerts("Error", "Error al insertar!!!", "ERROR");
-                        alert.show();
+                List<Pasaje> compra = controller.getCompra();
+                boolean result = pasajeDao.insertAll(compra);
+                if (result) {
+                    // se muestran los codigos generados y el total pagado
+                    double total = 0;
+                    for (Pasaje p : compra) {
+                        total += p.getCosto();
                     }
+                    String codigos = compra.size() == 1
+                            ? compra.get(0).getCodigo()
+                            : compra.get(0).getCodigo() + " ... " + compra.get(compra.size() - 1).getCodigo();
+                    Alert alert = utilAlert.mostrarAlerts("Pasajes registrados",
+                            "Registro satisfactorio!!!\nComprador: " + compra.get(0).getComprador().getNombres() + " "
+                                    + compra.get(0).getComprador().getApellidos()
+                                    + "\nPasajes comprados: " + compra.size()
+                                    + "\nCodigos: " + codigos
+                                    + "\nTotal pagado: S/ " + String.format("%.2f", total), "CONFIRMATION");
+                    alert.show();
                 } else {
-                    boolean result = pasajeDao.update(pasajeProcesado);
-                    if (result) {
-                        Alert alert = utilAlert.mostrarAlerts("Update",
-                                "Registro actualizado!!!", "WARNING");
-                        alert.showAndWait();
-                    } else {
-                        Alert alert = utilAlert.mostrarAlerts("Error",
-                                "Error al actualizar!!!", "ERROR");
-                        alert.show();
-                    }
+                    Alert alert = utilAlert.mostrarAlerts("Error", "Error al insertar!!!", "ERROR");
+                    alert.show();
                 }
                 txtBuscarDni.clear();
                 cargarDatos();

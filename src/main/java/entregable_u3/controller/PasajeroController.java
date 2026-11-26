@@ -129,7 +129,7 @@ public class PasajeroController {
     private void showForm(Pasajero x) {
         try {
             FXMLLoader loader = new FXMLLoader(HelloApplication.class
-                    .getResource("/entregable_u2/views/pasajero-form.fxml"));
+                    .getResource("/entregable_u3/views/pasajero-form.fxml"));
             Parent root = loader.load();
             PasajeroFormController controller = loader.getController();
             controller.setPasajero(x); //pasamos null si es nuevo

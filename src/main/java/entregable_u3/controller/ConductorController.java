@@ -124,7 +124,7 @@ public class ConductorController {
     private void showForm(Conductor x) {
         try {
             FXMLLoader loader = new FXMLLoader(HelloApplication.class
-                    .getResource("/entregable_u2/views/conductor-form.fxml"));
+                    .getResource("/entregable_u3/views/conductor-form.fxml"));
             Parent root = loader.load();
             ConductorFormController controller = loader.getController();
             controller.setConductor(x); //pasamos null si es nuevo

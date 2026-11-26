@@ -58,6 +58,12 @@ public class ViajeDaoImpl implements IViajeDao {
         v.setIdviaje(rs.getInt("idviaje"));
         v.setFechaSalida(LocalDateTime.parse(rs.getString("fecha_salida"), FMT));
         v.setFechaLlegada(LocalDateTime.parse(rs.getString("fecha_llegada"), FMT));
+        // estado y fecha y hora reales (pueden ser null si el viaje aun no sale o no llega)
+        v.setEstado(rs.getString("estado") == null ? "E" : rs.getString("estado"));
+        String salidaReal = rs.getString("fecha_salida_real");
+        String llegadaReal = rs.getString("fecha_llegada_real");
+        v.setFechaSalidaReal(salidaReal == null ? null : LocalDateTime.parse(salidaReal, FMT));
+        v.setFechaLlegadaReal(llegadaReal == null ? null : LocalDateTime.parse(llegadaReal, FMT));
         v.setTarifa(t);
         v.setConductor(c);
         v.setVehiculo(ve);
@@ -155,6 +161,26 @@ public class ViajeDaoImpl implements IViajeDao {
             System.out.println("Error al listar viaje:" + e.getMessage());
         }
         return lista;
+    }
+
+    // Igual que updateStatus de ReservaDaoImpl: cambia el estado del viaje.
+    // Ademas guarda la fecha y hora real de salida y de llegada (null si todavia no se registran)
+    @Override
+    public boolean updateStatus(Viaje v) {
+        boolean flag = false;
+        String query = " UPDATE viaje SET estado=?, fecha_salida_real=?, fecha_llegada_real=? WHERE idviaje=? ";
+        try (Connection cn = ConexionDB.getConnection();
+             PreparedStatement st = cn.prepareStatement(query)) {
+            st.setString(1,v.getEstado());
+            st.setString(2,v.getFechaSalidaReal() == null ? null : v.getFechaSalidaReal().format(FMT));
+            st.setString(3,v.getFechaLlegadaReal() == null ? null : v.getFechaLlegadaReal().format(FMT));
+            st.setInt(4,v.getIdviaje());
+            st.executeUpdate();
+            flag=true;
+        } catch (SQLException e) {
+            System.out.println("Error al actualizar el estado del viaje:" + e.getMessage());
+        }
+        return flag;
     }
 
     // Igual que validateHabitacion del proyecto guia: dos viajes se cruzan cuando

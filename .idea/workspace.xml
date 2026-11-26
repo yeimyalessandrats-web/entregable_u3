@@ -5,28 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da7966ec-d3a2-4183-bce9-91a552b81cf9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/TarifaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/TarifaFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/ViajeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/ViajeFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/implementacion/PasajeDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/implementacion/TarifaDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/implementacion/ViajeDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/interfaces/IPasajeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/interfaces/ITarifaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/interfaces/IViajeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Pasaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Tarifa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Viaje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/pasaje-form.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/pasaje-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/tarifa-form.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/tarifa-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/viaje-form.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/viaje-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/AcompananteFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/test/TestPasaje.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/test/TestTarifa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/test/TestViaje.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/ConductorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/ConductorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/PasajeroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/TarifaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/TarifaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/VehiculoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/VehiculoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/ViajeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/controller/ViajeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/implementacion/PasajeDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/implementacion/PasajeDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/implementacion/ViajeDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/implementacion/ViajeDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/interfaces/IPasajeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/interfaces/IPasajeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/interfaces/IViajeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/interfaces/IViajeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Pasaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Pasaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Pasajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Pasajero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Viaje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/modelo/Viaje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entregable_u3/utils/ConexionDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entregable_u3/utils/ConexionDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/conductor-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/pasaje-form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/pasaje-form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/pasaje-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entregable_u3/views/pasaje-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/POO 2026/backup/entregable_u3/src/main/resources/entregable_u3/views"
+    "last_opened_file_path": "C:/IntelIdea/entregable_u3"
   }
 }]]></component>
   <component name="RecentsManager">

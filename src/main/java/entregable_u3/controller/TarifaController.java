@@ -121,7 +121,7 @@ public class TarifaController {
     private void showForm(Tarifa t){
         try{
             FXMLLoader loader = new FXMLLoader(HelloApplication.class
-                    .getResource("/entregable_u2/views/tarifa-form.fxml"));
+                    .getResource("/entregable_u3/views/tarifa-form.fxml"));
             Parent root = loader.load();
             TarifaFormController controller = loader.getController();
             controller.setTarifa(t); //pasamos la tarifa null si es nueva

@@ -2,6 +2,7 @@ package entregable_u3.modelo;
 
 import javafx.beans.property.*;
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Pasajero extends Persona {
     private final IntegerProperty idpasajero = new SimpleIntegerProperty();
@@ -52,6 +53,22 @@ public class Pasajero extends Persona {
 
     public final ObjectProperty<LocalDate> fechaNacimientoProperty() {
         return fechaNacimiento;
+    }
+
+    // edad minima para comprar pasajes
+    public static final int EDAD_MINIMA_COMPRA = 18;
+
+    // Edad real del pasajero: se calcula con la fecha de nacimiento (si la tiene), si no se usa la edad registrada
+    public int calcularEdad() {
+        if (getFechaNacimiento() != null) {
+            return Period.between(getFechaNacimiento(), LocalDate.now()).getYears();
+        }
+        return getEdad();
+    }
+
+    // true si el pasajero tiene 18 años o mas (puede comprar pasajes)
+    public boolean esMayorDeEdad() {
+        return calcularEdad() >= EDAD_MINIMA_COMPRA;
     }
 
     // Texto que se muestra en los ComboBox

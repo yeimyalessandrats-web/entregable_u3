@@ -133,7 +133,7 @@ public class ViajeController {
     private void showForm(Viaje v) {
         try {
             FXMLLoader loader = new FXMLLoader(HelloApplication.class
-                    .getResource("/entregable_u2/views/viaje-form.fxml"));
+                    .getResource("/entregable_u3/views/viaje-form.fxml"));
             Parent root = loader.load();
             ViajeFormController controller = loader.getController();
             controller.setViaje(v); //pasamos el viaje null si es nuevo

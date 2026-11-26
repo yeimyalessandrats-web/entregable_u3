@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<VBox spacing="15.0" style="-fx-background-color: white" stylesheets="@style.css"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      prefWidth="520.0"
+      fx:controller="entregable_u3.controller.AcompananteFormController">
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+    </padding>
+    <children>
+        <Label text="Pasajeros de la compra" textFill="#0B2545">
+            <font><Font name="Georgia Bold" size="18.0"/></font>
+        </Label>
+        <Separator prefWidth="200.0"/>
+        <Label fx:id="lblInfo" text="-" textFill="#4A5A6A" wrapText="true"/>
+        <!-- las filas (DNI y nombre de cada pasajero) las agrega el controlador -->
+        <VBox fx:id="vbFilas" spacing="10.0"/>
+        <HBox alignment="CENTER_RIGHT" spacing="10.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="31.0"
+                        prefWidth="100.0" styleClass="button-action-delete" text="Cancelar"/>
+                <Button mnemonicParsing="false" onAction="#handleAceptar" prefHeight="31.0"
+                        prefWidth="100.0" styleClass="button-action-edit" text="Aceptar"/>
+            </children>
+        </HBox>
+    </children>
+
+</VBox>

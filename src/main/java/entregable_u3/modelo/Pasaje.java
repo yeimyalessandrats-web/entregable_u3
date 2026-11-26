@@ -10,8 +10,9 @@ public class Pasaje {
     private final StringProperty codigo = new SimpleStringProperty();
     private final ObjectProperty<LocalDateTime> fechaEmision = new SimpleObjectProperty<>();
     private final DoubleProperty costo = new SimpleDoubleProperty();
-    //asociacion de las llaves foraneas: el pasaje llama al pasajero y al viaje
+    //asociacion de las llaves foraneas: el pasaje llama al pasajero (el que viaja), al comprador (el que paga) y al viaje
     private final ObjectProperty<Pasajero> pasajero = new SimpleObjectProperty<>();
+    private final ObjectProperty<Pasajero> comprador = new SimpleObjectProperty<>();
     private final ObjectProperty<Viaje> viaje = new SimpleObjectProperty<>();
     private final ObjectProperty<Usuario> usuario = new SimpleObjectProperty<>();
 
@@ -80,6 +81,19 @@ public class Pasaje {
 
     public final ObjectProperty<Pasajero> pasajeroProperty() {
         return pasajero;
+    }
+
+
+    public final Pasajero getComprador() {
+        return comprador.get();
+    }
+
+    public final void setComprador(Pasajero value) {
+        comprador.set(value);
+    }
+
+    public final ObjectProperty<Pasajero> compradorProperty() {
+        return comprador;
     }
 
 

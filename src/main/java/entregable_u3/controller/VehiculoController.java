@@ -112,7 +112,7 @@ public class VehiculoController {
     private void showForm(Vehiculo x) {
         try {
             FXMLLoader loader = new FXMLLoader(HelloApplication.class
-                    .getResource("/entregable_u2/views/vehiculo-form.fxml"));
+                    .getResource("/entregable_u3/views/vehiculo-form.fxml"));
             Parent root = loader.load();
             VehiculoFormController controller = loader.getController();
             controller.setVehiculo(x); //pasamos null si es nuevo

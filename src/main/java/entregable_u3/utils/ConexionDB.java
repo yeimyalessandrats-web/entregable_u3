@@ -6,19 +6,23 @@ import java.sql.*;
 public class ConexionDB {
     private static Connection connection;
     private static boolean iniciada = false;
+    //carpeta donde se crea la base de datos
+    private static final String DB_FOLDER = "C:/DB";
 
     //connection mode prod
     public static Connection getConnection(){
         try{
             if (connection == null || connection.isClosed()){
-                //1. Obtener la carpeta del usuario actual
-                String userHome = System.getProperty("user.home");
-                File directory = new File(userHome+"/SistemaTransporte");
+                //1. La carpeta de la BD es C:\DB
+                File directory = new File(DB_FOLDER);
                 //2. si la carpeta no existe, la creamos
-                if (!directory.exists()){
+                if (!directory.exists() && !directory.mkdirs()){
+                    // si no se puede crear C:\DB (sin permisos) se usa la carpeta del usuario
+                    System.out.println("No se pudo crear " + DB_FOLDER + ", se usara la carpeta del usuario");
+                    directory = new File(System.getProperty("user.home") + "/SistemaTransporte");
                     directory.mkdirs();
                 }
-                //la bd se guardara C:\Users\Nombre\SistemaTransporte\transporte.db
+                //la bd se guardara C:\DB\transporte.db
                 String dbPath =directory.getAbsolutePath()+"/transporte.db";
                 String url = "jdbc:sqlite:"+dbPath;
                 Class.forName("org.sqlite.JDBC");
@@ -69,11 +73,15 @@ public class ConexionDB {
                 "hora_salida TEXT NOT NULL, duracion_min INTEGER NOT NULL, precio REAL NOT NULL, " +
                 "UNIQUE(origen, destino, hora_salida));";
 
-        // fecha_salida y fecha_llegada guardan fecha y hora: yyyy-MM-dd HH:mm
+        // fecha_salida y fecha_llegada guardan fecha y hora programadas: yyyy-MM-dd HH:mm
+        // fecha_salida_real y fecha_llegada_real guardan la fecha y hora reales (null hasta registrarlas)
+        // estado: E = En espera, T = En transito, D = En destino
         String sqlViaje = "CREATE TABLE IF NOT EXISTS viaje (" +
                 "idviaje INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "tarifaId INTEGER NOT NULL, conductorId INTEGER NOT NULL, vehiculoId INTEGER NOT NULL, " +
                 "fecha_salida DATETIME NOT NULL, fecha_llegada DATETIME NOT NULL, " +
+                "fecha_salida_real DATETIME, fecha_llegada_real DATETIME, " +
+                "estado TEXT NOT NULL DEFAULT 'E', " +
                 "FOREIGN KEY(tarifaId) REFERENCES tarifa(idtarifa), " +
                 "FOREIGN KEY(conductorId) REFERENCES conductor(idconductor), " +
                 "FOREIGN KEY(vehiculoId) REFERENCES vehiculo(idvehiculo));";
@@ -83,9 +91,11 @@ public class ConexionDB {
                 "codigo TEXT NOT NULL UNIQUE, " +
                 "pasajeroId INTEGER NOT NULL, viajeId INTEGER NOT NULL, " +
                 "fecha_emision DATETIME NOT NULL, costo REAL NOT NULL, usuarioId INTEGER, " +
+                "compradorId INTEGER, " +
                 "FOREIGN KEY(pasajeroId) REFERENCES pasajero(idpasajero), " +
                 "FOREIGN KEY(viajeId) REFERENCES viaje(idviaje), " +
-                "FOREIGN KEY(usuarioId) REFERENCES usuario(idusuario));";
+                "FOREIGN KEY(usuarioId) REFERENCES usuario(idusuario), " +
+                "FOREIGN KEY(compradorId) REFERENCES pasajero(idpasajero));";
 
         try (Statement stmt = connection.createStatement()) {
             stmt.execute(sqlConductor);
@@ -95,6 +105,13 @@ public class ConexionDB {
             stmt.execute(sqlTarifa);
             stmt.execute(sqlViaje);
             stmt.execute(sqlPasaje);
+
+            // si la BD ya existia (version anterior) se agregan las columnas nuevas
+            // pasaje: pasajeroId = quien viaja, compradorId = quien compro y pago (puede comprar para otros)
+            agregarColumna("pasaje", "compradorId", "INTEGER REFERENCES pasajero(idpasajero)");
+            agregarColumna("viaje", "estado", "TEXT NOT NULL DEFAULT 'E'");
+            agregarColumna("viaje", "fecha_salida_real", "DATETIME");
+            agregarColumna("viaje", "fecha_llegada_real", "DATETIME");
 
             // INSERTAR USUARIO ADMIN POR DEFECTO (Si la tabla esta vacia)
             // Esto es vital para que el alumno pueda loguearse tras instalar
@@ -128,6 +145,24 @@ public class ConexionDB {
 
         } catch (SQLException e) {
             System.out.println("Error al inicializar tablas: " + e.getMessage());
+        }
+    }
+
+    // Agrega una columna a una tabla solo si todavia no existe
+    private static void agregarColumna(String tabla, String columna, String definicion) throws SQLException {
+        boolean existe = false;
+        try (Statement st = connection.createStatement();
+             ResultSet rs = st.executeQuery("PRAGMA table_info(" + tabla + ")")) {
+            while (rs.next()) {
+                if (columna.equalsIgnoreCase(rs.getString("name"))) {
+                    existe = true;
+                }
+            }
+        }
+        if (!existe) {
+            try (Statement st = connection.createStatement()) {
+                st.execute("ALTER TABLE " + tabla + " ADD COLUMN " + columna + " " + definicion);
+            }
         }
     }
 
